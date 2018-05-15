@@ -65,7 +65,7 @@ function removeFromCart(item) {
   // write your code here
   let cart  = getCart()
   for (var i = 0; i < getCart().length; i++) {
-    if (cart[i].hasOwnProperty(item)) {
+    if (cart[i].hasOwnProperty.itemName) {
       console.log(cart);
       cart.splice(i, 1);
       return cart;
