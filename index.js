@@ -38,10 +38,10 @@ function viewCart() {
 
 function largeCartList() {
   var cartIntro = 'In your cart, you have '
-  if ( getCart().length >= 1 ) {
+  if (getCart().length >= 1) {
     cartIntro += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
   }
-  if ( getCart().length > 1 ) {
+  if (getCart().length > 1) {
     var extraItems = ''
     for (var i=1; i<getCart().length -1; i++) {
       extraItems += `, ${getCart()[i].itemName} at $${getCart()[i].itemPrice}`
@@ -63,8 +63,9 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  for (var i = 0; i < cart.length; i++) {
+  for (var i = 0; i < getCart().length; i++) {
     if (cart[i].hasOwnProperty(item)) {
+      console.log(cart);
       cart.splice(i, 1);
       return cart;
     }
